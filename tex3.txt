@@ -1,0 +1,499 @@
+Last login: Wed Mar 24 16:15:21 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+awaras-MacBook-Pro:~ awaraamin$ mongo
+MongoDB shell version v4.4.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("998dc9aa-d864-4e08-b526-ca0ba2574371") }
+MongoDB server version: 4.4.3
+---
+The server generated these startup warnings when booting:
+        2021-03-24T10:44:57.707+03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-03-24T10:44:57.708+03:00: Soft rlimits too low
+        2021-03-24T10:44:57.708+03:00:         currentValue: 256
+        2021-03-24T10:44:57.708+03:00:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin    0.000GB
+config   0.000GB
+local    0.000GB
+shopDB   0.000GB
+shopDB2  0.000GB
+shopDB3  0.000GB
+> use shopDB2
+switched to db shopDB2
+> db.dropDatabase()
+{ "dropped" : "shopDB2", "ok" : 1 }
+> show dbs
+admin    0.000GB
+config   0.000GB
+local    0.000GB
+shopDB   0.000GB
+shopDB3  0.000GB
+> ^C
+bye
+awaras-MacBook-Pro:~ awaraamin$ cd 2020
+awaras-MacBook-Pro:2020 awaraamin$ cd ForGitHub/
+awaras-MacBook-Pro:ForGitHub awaraamin$ cd mongoDB/
+awaras-MacBook-Pro:mongoDB awaraamin$ cd fruitsProject/
+awaras-MacBook-Pro:fruitsProject awaraamin$ npm i mongoose
+npm WARN fruitsproject@1.0.0 No description
+npm WARN fruitsproject@1.0.0 No repository field.
+
++ mongoose@5.12.2
+added 16 packages from 85 contributors and audited 36 packages in 3.668s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+internal/modules/cjs/loader.js:968
+  throw err;
+  ^
+
+Error: Cannot find module 'mangoose'
+Require stack:
+- /Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/app.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:965:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:841:27)
+    at Module.require (internal/modules/cjs/loader.js:1025:19)
+    at require (internal/modules/cjs/helpers.js:72:18)
+    at Object.<anonymous> (/Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/app.js:1:18)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/app.js' ]
+}
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+/Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/app.js:4
+mongoose.connect("mongodb://localhost:27017/fruitsDB", {useNewUrlParser: true});
+^
+
+ReferenceError: mongoose is not defined
+    at Object.<anonymous> (/Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/app.js:4:1)
+    at Module._compile (internal/modules/cjs/loader.js:1137:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)
+    at Module.load (internal/modules/cjs/loader.js:985:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:878:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)
+    at internal/main/run_main_module.js:17:47
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+(node:2932) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+(node:2943) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+(node:2956) [MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ show dbs
+-bash: show: command not found
+awaras-MacBook-Pro:fruitsProject awaraamin$ mongo
+MongoDB shell version v4.4.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("3aad06e9-e364-403a-a12b-689b9f15f9a1") }
+MongoDB server version: 4.4.3
+---
+The server generated these startup warnings when booting:
+        2021-03-24T10:44:57.707+03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-03-24T10:44:57.708+03:00: Soft rlimits too low
+        2021-03-24T10:44:57.708+03:00:         currentValue: 256
+        2021-03-24T10:44:57.708+03:00:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+>
+>
+>
+> show dbs
+admin     0.000GB
+config    0.000GB
+fruitsDB  0.000GB
+local     0.000GB
+shopDB    0.000GB
+shopDB3   0.000GB
+> use fruitsDB
+switched to db fruitsDB
+> SHOW COLLECTIONS
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:5
+> show collections
+fruits
+> db.fruits.find()
+{ "_id" : ObjectId("605b408d4065270b747b5aaf"), "name" : "Apple", "review" : "Pretty solid as a fruit.", "__v" : 0 }
+{ "_id" : ObjectId("605b40dd17bfc80b7f6ec321"), "name" : "Apple", "review" : "Pretty solid as a fruit.", "__v" : 0 }
+{ "_id" : ObjectId("605b410d2f22c40b8c7dab5f"), "name" : "Apple", "review" : "Pretty solid as a fruit.", "__v" : 0 }
+{ "_id" : ObjectId("605b41c69dd5010bad2106be"), "name" : "Apple", "review" : "Pretty solid as a fruit.", "__v" : 0 }
+> ^C
+bye
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ mongo
+MongoDB shell version v4.4.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("179d2e46-52c5-4916-9acd-953da8469178") }
+MongoDB server version: 4.4.3
+---
+The server generated these startup warnings when booting:
+        2021-03-24T10:44:57.707+03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+        2021-03-24T10:44:57.708+03:00: Soft rlimits too low
+        2021-03-24T10:44:57.708+03:00:         currentValue: 256
+        2021-03-24T10:44:57.708+03:00:         recommendedMinimum: 64000
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin     0.000GB
+config    0.000GB
+fruitsDB  0.000GB
+local     0.000GB
+shopDB    0.000GB
+shopDB3   0.000GB
+> use fruitsDB
+switched to db fruitsDB
+> show collections
+fruits
+people
+> db.people.find()
+{ "_id" : ObjectId("605b463834cc6c0c7eb68497"), "name" : "Awara", "age" : 37, "__v" : 0 }
+> ^C
+bye
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+Successfully saved all the fruits to fruitsDB
+
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+Successfully saved all the fruits to fruitsDB
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+[
+  {
+    _id: 605b408d4065270b747b5aaf,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b40dd17bfc80b7f6ec321,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b410d2f22c40b8c7dab5f,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b41c69dd5010bad2106be,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4d,
+    name: 'Kiwi',
+    review: 'The best fruit!',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4e,
+    name: 'Orange',
+    review: 'Too sour for me',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4f,
+    name: 'banana',
+    review: 'Weird texture!',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03c,
+    name: 'Kiwi',
+    review: 'The best fruit!',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03d,
+    name: 'Orange',
+    review: 'Too sour for me',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03e,
+    name: 'banana',
+    review: 'Weird texture!',
+    __v: 0
+  }
+]
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+[
+  {
+    _id: 605b408d4065270b747b5aaf,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b40dd17bfc80b7f6ec321,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b410d2f22c40b8c7dab5f,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b41c69dd5010bad2106be,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4d,
+    name: 'Kiwi',
+    review: 'The best fruit!',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4e,
+    name: 'Orange',
+    review: 'Too sour for me',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4f,
+    name: 'banana',
+    review: 'Weird texture!',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03c,
+    name: 'Kiwi',
+    review: 'The best fruit!',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03d,
+    name: 'Orange',
+    review: 'Too sour for me',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03e,
+    name: 'banana',
+    review: 'Weird texture!',
+    __v: 0
+  }
+]
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+[
+  {
+    _id: 605b408d4065270b747b5aaf,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b40dd17bfc80b7f6ec321,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b410d2f22c40b8c7dab5f,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b41c69dd5010bad2106be,
+    name: 'Apple',
+    review: 'Pretty solid as a fruit.',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4d,
+    name: 'Kiwi',
+    review: 'The best fruit!',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4e,
+    name: 'Orange',
+    review: 'Too sour for me',
+    __v: 0
+  },
+  {
+    _id: 605b7b2c8dd4a50f63208a4f,
+    name: 'banana',
+    review: 'Weird texture!',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03c,
+    name: 'Kiwi',
+    review: 'The best fruit!',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03d,
+    name: 'Orange',
+    review: 'Too sour for me',
+    __v: 0
+  },
+  {
+    _id: 605b7db470c1470f9ff0c03e,
+    name: 'banana',
+    review: 'Weird texture!',
+    __v: 0
+  }
+]
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+undefined
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node.a
+-bash: node.a: command not found
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+Apple
+Apple
+Apple
+Apple
+Kiwi
+Orange
+banana
+Kiwi
+Orange
+banana
+^C
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+Apple
+Apple
+Apple
+Apple
+Kiwi
+Orange
+banana
+Kiwi
+Orange
+banana
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+(node:4596) UnhandledPromiseRejectionWarning: ValidationError: Fruit validation failed: rating: Path `rating` (34) is more than maximum allowed value (10).
+    at model.Document.invalidate (/Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/node_modules/mongoose/lib/document.js:2703:32)
+    at /Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/node_modules/mongoose/lib/document.js:2523:17
+    at /Users/awaraamin/2020/ForGitHub/mongoDB/fruitsProject/node_modules/mongoose/lib/schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+(node:4596) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:4596) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+Apple
+Apple
+Apple
+Apple
+Kiwi
+Orange
+banana
+Kiwi
+Orange
+banana
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+Apple
+Apple
+Apple
+Apple
+Kiwi
+Orange
+banana
+Kiwi
+Orange
+banana
+awaras-MacBook-Pro:fruitsProject awaraamin$ node app.js
+Apple
+Apple
+Apple
+Apple
+Kiwi
+Orange
+banana
+Kiwi
+Orange
+banana
+Apple
+awaras-MacBook-Pro:fruitsProject awaraamin$
